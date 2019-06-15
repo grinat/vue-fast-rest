@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List</title>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vuex"></script>
+
+  <script src="../dist/vue-fast-rest.js"></script>
+</head>
+<body>
+
+<div id="app">
+<div v-if="loading.read !== false">
+   Loading...
+</div>
+<div v-else>
+    <div class="form">
+        <input v-model="form.first_name" placeholder="type first_name">
+        <button @click="addItem('top')">Add item to top</button>
+        <button @click="addItem('bottom')">Add item to bottom</button>
+    </div>
+    <table border="1">
+    <tr>
+      <td>id</td><td>first_name</td><td>_storeUUID</td><td>Actions</td>
+    </tr>
+    <tr v-for="item in items.data" :key="item.id || item._storeUUID">
+      <td>{{item.id}}</td>
+      <td>{{item.first_name}}</td>
+      <td>{{item._storeUUID}}</td>
+      <td>
+         <button @click="removeItem(item)">Remove</button>
+         <button @click="addItemAfter(item)">insertAfter</button>
+      </td>
+    </tr>
+    </table>
+</div>
+</div>
+
+<script src="list.js"></script>
+
+</body>
+</html>

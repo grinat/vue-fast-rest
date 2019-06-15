@@ -1,11 +1,49 @@
 {
   "name": "vue-fast-rest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/vue-fast-rest",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c rollup.config.js",
+    "test:unit": "vue-cli-service test:unit"
   },
-  "author": "Rinat Gabdrashitov",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grinat/vue-fast-rest.git"
+  },
+  "author": "Gabdrashitov Rinat <paladin2012gnu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grinat/vue-fast-rest/issues"
+  },
+  "homepage": "https://github.com/grinat/vue-fast-rest#readme",
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "@types/chai": "^4.1.7",
+    "@types/expect": "^1.20.4",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-plugin-unit-mocha": "^3.7.0",
+    "@vue/cli-service": "^3.8.4",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "mocha": "^6.1.4",
+    "rollup": "^1.15.5",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.2",
+    "rollup-plugin-uglify": "^6.0.2",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.1"
+  }
 }
