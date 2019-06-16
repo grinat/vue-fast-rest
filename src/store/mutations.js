@@ -41,7 +41,7 @@ export default class mutations {
     const newData = response.data || {}
     let endpointData = state.endpoints[endpoint] || null
 
-    if (endpointData === newData) {
+    if (endpointData === null) {
       if (action !== REST.updateActions.replace) {
         endpointData = {data: []}
       } else {
