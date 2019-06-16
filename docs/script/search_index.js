@@ -360,6 +360,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/http/defaultrestclient.js~defaultrestclient#onresponse",
+    "class/src/http/DefaultRestClient.js~DefaultRestClient.html#instance-method-onResponse",
+    "src/http/DefaultRestClient.js~DefaultRestClient#onResponse",
+    "method"
+  ],
+  [
     "src/http/defaultrestclient.js~defaultrestclient#read",
     "class/src/http/DefaultRestClient.js~DefaultRestClient.html#instance-method-read",
     "src/http/DefaultRestClient.js~DefaultRestClient#read",

@@ -1,17 +1,17 @@
 {
-  "coverage": "62.06%",
-  "expectCount": 29,
-  "actualCount": 18,
+  "coverage": "63.33%",
+  "expectCount": 30,
+  "actualCount": 19,
   "files": {
     "src/http/DefaultRestClient.js": {
-      "expectCount": 8,
-      "actualCount": 3,
+      "expectCount": 9,
+      "actualCount": 4,
       "undocumentLines": [
         3,
-        37,
-        46,
-        55,
-        64
+        47,
+        57,
+        67,
+        77
       ]
     },
     "src/index.js": {
