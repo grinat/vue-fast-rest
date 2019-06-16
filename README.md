@@ -101,3 +101,39 @@ export default {
 </script>
 ```
 
+## Requirements
+
+Rest API with arrays of data should always be returned in the format:
+```json
+{
+  "data": [
+     {"id": 1, "price": 1},
+     {"id": 2, "title": "foo"}
+  ],
+  // optional data, need for pagination
+  "_meta": {
+     "totalCount": 2, 
+     "currentPage": 1,
+     "pageCount": 1,
+     "perPage": 20
+  }
+}
+```
+For one item:
+```json
+{"id": 1, "price": 1}
+```
+
+If you have other format, you can use adapters for convert data:
+```js
+this.$store.dispatch(REST.actions.updateUrlEndpoint, {
+  endpoint: this.getEndpoint(),
+  params: {
+    transformResponse: [function (data) {
+      // Do whatever you want to transform the data
+      return data
+    }]
+  }
+})
+```
+

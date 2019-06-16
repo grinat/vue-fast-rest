@@ -11,15 +11,15 @@ export default class actions {
   /**
    * @param {Vuex.Store} context
    * @param {Object} options
-   * @param {String} options.url - Url where send response
-   * @param {String} options.endpoint - Where save data
+   * @param {String} options.url - optional, url where send response(if null, used endpoint
+   * @param {String} options.endpoint - Where save data(if null, response not saved in store)
    * @param {Boolean} options.insertMany
    * @param {Number} options.cache
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {Boolean} options.offline
    * @returns {Promise<Object|Error>}
    */
-  static async updateUrlEndpoint (context, {url, endpoint, insertMany = false, cache = null, params, offline = false}) {
+  static async updateUrlEndpoint (context, {url = null, endpoint = null, insertMany = false, cache = null, params, offline = false}) {
     const services = await context.dispatch('getServices')
     if (cache === null) {
       cache = services.config.cache
@@ -30,8 +30,10 @@ export default class actions {
         return {data: context.state.endpoints[endpoint]}
       }
       const offlineResponse = {data: {data: []}}
-      context.commit('updateCache', {endpoint, cache})
-      context.commit('updateEndpoint', {endpoint, response: offlineResponse, insertMany})
+      if (endpoint) {
+        context.commit('updateCache', {endpoint, cache})
+        context.commit('updateEndpoint', {endpoint, response: offlineResponse, insertMany})
+      }
       return offlineResponse
     }
 
@@ -41,20 +43,20 @@ export default class actions {
       return {data: context.state.endpoints[endpoint]}
     }
 
-    context.commit('setEndpointState', {loading: true, endpoint})
+    endpoint && context.commit('setEndpointState', {loading: true, endpoint})
     return services.restClient.read(
       services, url || endpoint, params
     ).then(response => {
-      if (response) {
+      if (endpoint) {
         context.commit('updateCache', {endpoint, cache})
         context.commit('updateEndpoint', {endpoint, response, insertMany})
       }
 
-      context.commit('setEndpointState', {loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {loading: false, endpoint})
 
       return response
     }).catch(e => {
-      context.commit('setEndpointState', {loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {loading: false, endpoint})
 
       return Promise.reject(e)
     })
@@ -65,19 +67,15 @@ export default class actions {
    * @param {Object} options
    * @param {String} options.url - Url where send response
    * @param {Object} options.data
-   * @param {String} options.endpoint - Where append model
-   * @param {Number} options.cache
+   * @param {String} options.endpoint - Endpoint where saved model(if null, response not saved in store)
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {REST.updateActions} options.action - What do with model
    * @param {String|Number} options.id
    * @param {Boolean} options.offline
    * @returns {Promise<Object|Error>}
    */
-  static async createModel (context, {url, data: form, endpoint, cache = null, params, action = REST.updateActions.append, id, offline = false}) {
+  static async createModel (context, {url = null, data: form, endpoint = null, params, action = REST.updateActions.append, id, offline = false}) {
     const services = await context.dispatch('getServices')
-    if (cache === null) {
-      cache = services.config.cache
-    }
 
     const data = {...form}
 
@@ -86,31 +84,40 @@ export default class actions {
       const offlineResponse = {data}
       if (endpoint) {
         context.commit('updateEndpoint', {response: offlineResponse, endpoint, action, id})
-        context.commit('updateCache', {endpoint, cache})
       }
       return offlineResponse
     }
 
-    context.commit('setEndpointState', {type: CRUD_ACTIONS.read, loading: true, endpoint})
+    endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.read, loading: true, endpoint})
     return services.restClient.create(
       services, url, data, params
     ).then(response => {
       if (endpoint) {
         context.commit('updateEndpoint', {response, endpoint, action, id})
-        context.commit('updateCache', {endpoint, cache})
       }
 
-      context.commit('setEndpointState', {type: CRUD_ACTIONS.read, loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.read, loading: false, endpoint})
 
       return response
     }).catch(e => {
-      context.commit('setEndpointState', {type: CRUD_ACTIONS.read, loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.read, loading: false, endpoint})
 
       return Promise.reject(e)
     })
   }
 
-  static async updateModel (context, {url, data: form, id, endpoint, params, offline = false}) {
+  /**
+   * @param {Vuex.Store} context
+   * @param {Object} options
+   * @param {String} options.url - Url where send response
+   * @param {Object} options.data
+   * @param {String} options.endpoint - Endpoint where saved model(if null, response not saved in store)
+   * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
+   * @param {String|Number} options.id
+   * @param {Boolean} options.offline - dont send response to server
+   * @returns {Promise<Object|Error>}
+   */
+  static async updateModel (context, {url = null, data: form, id, endpoint = null, params, offline = false}) {
     const services = await context.dispatch('getServices')
     const action = REST.updateActions.replaceSame
 
@@ -127,7 +134,7 @@ export default class actions {
       return offlineResponse
     }
 
-    context.commit('setEndpointState', {type: CRUD_ACTIONS.update, loading: true, endpoint})
+    endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.update, loading: true, endpoint})
     return await services.restClient.update(
       services, url, data, params
     ).then(response => {
@@ -135,17 +142,27 @@ export default class actions {
         context.commit('updateEndpoint', {response, id, endpoint, action})
       }
 
-      context.commit('setEndpointState', {type: CRUD_ACTIONS.update, loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.update, loading: false, endpoint})
 
       return response
     }).catch(e => {
-      context.commit('setEndpointState', {type: CRUD_ACTIONS.update, loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.update, loading: false, endpoint})
 
       return Promise.reject(e)
     })
   }
 
-  static async deleteModel (context, {url, endpoint, ids, params, offline = false}) {
+  /**
+   * @param {Vuex.Store} context
+   * @param {Object} options
+   * @param {String} options.url - Url where send response
+   * @param {String} options.endpoint - Endpoint where delete model(if null, not removed from endpoint)
+   * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
+   * @param {Array<number|string>} options.ids - Array of id to remove
+   * @param {Boolean} options.offline - dont send response to server
+   * @returns {Promise<Object|Error>}
+   */
+  static async deleteModel (context, {url = null, endpoint = null, ids, params, offline = false}) {
     const services = await context.dispatch('getServices')
 
     if (offline === true) {
@@ -155,7 +172,7 @@ export default class actions {
       return true
     }
 
-    context.commit('setEndpointState', {type: CRUD_ACTIONS.delete, loading: true, endpoint})
+    endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.delete, loading: true, endpoint})
     return services.restClient.delete(
       services, url, params
     ).then(response => {
@@ -163,12 +180,12 @@ export default class actions {
         context.commit('deleteModel', {endpoint, ids})
       }
 
-      context.commit('setEndpointState', {type: CRUD_ACTIONS.delete, loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.delete, loading: false, endpoint})
 
       return response
     }).catch(e => {
 
-      context.commit('setEndpointState', {type: CRUD_ACTIONS.delete, loading: false, endpoint})
+      endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.delete, loading: false, endpoint})
 
       return Promise.reject(e)
     })

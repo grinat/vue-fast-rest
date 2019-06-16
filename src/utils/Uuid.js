@@ -1,7 +1,11 @@
 /**
  * @private
+ * @ignore
  */
 export class Uuid {
+  /**
+   * @returns {string} - v4 uuid
+   */
   static generate () {
     let d = +new Date()
     if (typeof performance !== 'undefined' && typeof performance.now === 'function') {

@@ -6,7 +6,7 @@ import {services} from './types/services'
 
 /**
  * @param {Vue} Vue
- * @param {Options} options
+ * @param {Object} options
  * @param {Vuex.Store()} options.store
  * @param {DefaultRestClient()} options.restClient
  * @param {Object} options.services

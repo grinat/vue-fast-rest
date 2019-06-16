@@ -41,7 +41,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-REST.getters">REST.getters</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-REST.mutations">REST.mutations</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-REST.updateActions">REST.updateActions</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/Uuid.js~Uuid.html">Uuid</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -129,6 +128,35 @@ export default {
   }
 }
 &lt;/script&gt;</code>
+</code></pre>
+<h2 id="requirements">Requirements</h2><p>Rest API with arrays of data should always be returned in the format:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;data&quot;: [
+     {&quot;id&quot;: 1, &quot;price&quot;: 1},
+     {&quot;id&quot;: 2, &quot;title&quot;: &quot;foo&quot;}
+  ],
+  // optional data, need for pagination
+  &quot;_meta&quot;: {
+     &quot;totalCount&quot;: 2, 
+     &quot;currentPage&quot;: 1,
+     &quot;pageCount&quot;: 1,
+     &quot;perPage&quot;: 20
+  }
+}</code>
+</code></pre>
+<p>For one item:</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{&quot;id&quot;: 1, &quot;price&quot;: 1}</code>
+</code></pre>
+<p>If you have other format, you can use adapters for convert data:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">this.$store.dispatch(REST.actions.updateUrlEndpoint, {
+  endpoint: this.getEndpoint(),
+  params: {
+    transformResponse: [function (data) {
+      // Do whatever you want to transform the data
+      return data
+    }]
+  }
+})</code>
 </code></pre>
 </div>
 </div>

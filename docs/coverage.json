@@ -1,7 +1,7 @@
 {
-  "coverage": "53.57%",
-  "expectCount": 28,
-  "actualCount": 15,
+  "coverage": "62.06%",
+  "expectCount": 29,
+  "actualCount": 18,
   "files": {
     "src/http/DefaultRestClient.js": {
       "expectCount": 8,
@@ -21,11 +21,8 @@
     },
     "src/store/actions.js": {
       "expectCount": 6,
-      "actualCount": 4,
-      "undocumentLines": [
-        113,
-        148
-      ]
+      "actualCount": 6,
+      "undocumentLines": []
     },
     "src/store/getters.js": {
       "expectCount": 3,
@@ -33,14 +30,15 @@
       "undocumentLines": []
     },
     "src/store/mutations.js": {
-      "expectCount": 6,
+      "expectCount": 7,
       "actualCount": 1,
       "undocumentLines": [
         4,
-        17,
-        36,
-        40,
-        104
+        13,
+        43,
+        63,
+        67,
+        137
       ]
     },
     "src/store/state.js": {
@@ -55,10 +53,8 @@
     },
     "src/utils/Uuid.js": {
       "expectCount": 2,
-      "actualCount": 1,
-      "undocumentLines": [
-        5
-      ]
+      "actualCount": 2,
+      "undocumentLines": []
     }
   }
 }

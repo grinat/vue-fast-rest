@@ -10,6 +10,32 @@ const findDefaultHandler = (v, id) => {
   return false
 }
 
+const updateMeta = (endpointData, added = 0, removed = 0) => {
+  if (!endpointData._meta && endpointData.data) {
+    endpointData._meta = {
+      totalCount: endpointData.data.length,
+      pageCount: 1,
+      currentPage: 1,
+      perPage: endpointData.data.length * 2
+    }
+  }
+  if (endpointData._meta) {
+    if (added > 0) {
+      endpointData._meta.totalCount = +endpointData._meta.totalCount + added
+    }
+    if (removed > 0) {
+      endpointData._meta.totalCount = +endpointData._meta.totalCount - removed
+    }
+    endpointData._meta.pageCount = Math.ceil(endpointData._meta.totalCount / endpointData._meta.perPage)
+    if (endpointData._meta.currentPage > endpointData._meta.pageCount) {
+      endpointData._meta.currentPage = +endpointData._meta.pageCount
+    }
+    if (endpointData._meta.currentPage <= 0) {
+      endpointData._meta.currentPage = 1
+    }
+  }
+}
+
 /**
  * @private
  */
@@ -26,6 +52,7 @@ export default class mutations {
         for (let i = 0; i < endpointData.data.length; i++) {
           if (findFunc(endpointData.data[i], id) === true) {
             endpointData.data.splice(i, 1)
+            updateMeta(endpointData, 0, 1)
             break
           }
         }
@@ -43,7 +70,7 @@ export default class mutations {
 
     if (endpointData === null) {
       if (action !== REST.updateActions.replace) {
-        endpointData = {data: []}
+        endpointData = {data: [], _meta: {}}
       } else {
         endpointData = {}
       }
@@ -55,15 +82,19 @@ export default class mutations {
       case REST.updateActions.append:
         if (insertMany === true) {
           endpointData.data.push(...newData)
+          updateMeta(endpointData, newData.length)
         } else {
           endpointData.data.push(newData)
+          updateMeta(endpointData, 1)
         }
         break
       case REST.updateActions.prepend:
         if (insertMany === true) {
           endpointData.data.unshift(...newData)
+          updateMeta(endpointData, newData.length)
         } else {
           endpointData.data.unshift(newData)
+          updateMeta(endpointData, 1)
         }
         break
       case REST.updateActions.replaceSame:
@@ -86,8 +117,10 @@ export default class mutations {
         if (insertIndex > -1) {
           if (insertMany === true) {
             endpointData.data.splice(insertIndex + 1, 0, ...newData)
+            updateMeta(endpointData, newData.length)
           } else {
             endpointData.data.splice(insertIndex + 1, 0, newData)
+            updateMeta(endpointData, 1)
           }
         }
         break

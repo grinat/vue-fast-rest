@@ -41,7 +41,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-REST.getters">REST.getters</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-REST.mutations">REST.mutations</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-REST.updateActions">REST.updateActions</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/utils/Uuid.js~Uuid.html">Uuid</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -132,7 +131,7 @@
           
           <span data-ice="async">async</span>
           
-          <span class="code" data-ice="name"><span><a href="class/src/store/actions.js~actions.html#static-method-deleteModel">deleteModel</a></span></span><span class="code" data-ice="signature">(context: <span>*</span>, objectPattern1: {&quot;url&quot;: <span>*</span>, &quot;endpoint&quot;: <span>*</span>, &quot;ids&quot;: <span>*</span>, &quot;params&quot;: <span>*</span>, &quot;offline&quot;: <span>*</span>}): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/store/actions.js~actions.html#static-method-deleteModel">deleteModel</a></span></span><span class="code" data-ice="signature">(context: <span>Vuex.Store</span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>|<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -188,7 +187,7 @@
           
           <span data-ice="async">async</span>
           
-          <span class="code" data-ice="name"><span><a href="class/src/store/actions.js~actions.html#static-method-updateModel">updateModel</a></span></span><span class="code" data-ice="signature">(context: <span>*</span>, objectPattern1: {&quot;url&quot;: <span>*</span>, &quot;data&quot;: <span>*</span>, &quot;id&quot;: <span>*</span>, &quot;endpoint&quot;: <span>*</span>, &quot;params&quot;: <span>*</span>, &quot;offline&quot;: <span>*</span>}): <span>*</span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/store/actions.js~actions.html#static-method-updateModel">updateModel</a></span></span><span class="code" data-ice="signature">(context: <span>Vuex.Store</span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>|<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
         </p>
       </div>
       <div>
@@ -254,7 +253,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber76">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber77">source</a></span></span>
     </span>
   </h3>
 
@@ -302,14 +301,8 @@
       <td data-ice="name" class="code" data-depth="1">options.endpoint</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>Where append model</p>
+      <td data-ice="description"><p>Endpoint where saved model(if null, response not saved in store)</p>
 </td>
-    </tr>
-<tr data-ice="property" data-depth="1">
-      <td data-ice="name" class="code" data-depth="1">options.cache</td>
-      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
-      <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="1">
       <td data-ice="name" class="code" data-depth="1">options.params</td>
@@ -379,11 +372,11 @@
     
     <span data-ice="async">async</span>
     
-    <span class="code" data-ice="name">deleteModel</span><span class="code" data-ice="signature">(context: <span>*</span>, objectPattern1: {&quot;url&quot;: <span>*</span>, &quot;endpoint&quot;: <span>*</span>, &quot;ids&quot;: <span>*</span>, &quot;params&quot;: <span>*</span>, &quot;offline&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="code" data-ice="name">deleteModel</span><span class="code" data-ice="signature">(context: <span>Vuex.Store</span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>|<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber148">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber165">source</a></span></span>
     </span>
   </h3>
 
@@ -404,15 +397,50 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">context</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>Vuex.Store</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">objectPattern1</td>
-      <td data-ice="type" class="code">{&quot;url&quot;: <span>*</span>, &quot;endpoint&quot;: <span>*</span>, &quot;ids&quot;: <span>*</span>, &quot;params&quot;: <span>*</span>, &quot;offline&quot;: <span>*</span>}</td>
-      <td data-ice="appendix"><ul><li>default: {&quot;url&quot;:null,&quot;endpoint&quot;:null,&quot;ids&quot;:null,&quot;params&quot;:null,&quot;offline&quot;:null}</li></ul></td>
+      <td data-ice="name" class="code" data-depth="0">options</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
       <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.url</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Url where send response</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.endpoint</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Endpoint where delete model(if null, not removed from endpoint)</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.params</td>
+      <td data-ice="type" class="code"><span>axios.config</span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>see <span><a href="https://github.com/axios/axios#request-config">https://github.com/axios/axios#request-config</a></span></p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.ids</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>|<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></span>&gt;</td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Array of id to remove</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.offline</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>dont send response to server</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -424,7 +452,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>|<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</td>
           
         </tr>
       </tbody>
@@ -460,7 +488,7 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber180">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber197">source</a></span></span>
     </span>
   </h3>
 
@@ -511,11 +539,11 @@
     
     <span data-ice="async">async</span>
     
-    <span class="code" data-ice="name">updateModel</span><span class="code" data-ice="signature">(context: <span>*</span>, objectPattern1: {&quot;url&quot;: <span>*</span>, &quot;data&quot;: <span>*</span>, &quot;id&quot;: <span>*</span>, &quot;endpoint&quot;: <span>*</span>, &quot;params&quot;: <span>*</span>, &quot;offline&quot;: <span>*</span>}): <span>*</span></span>
+    <span class="code" data-ice="name">updateModel</span><span class="code" data-ice="signature">(context: <span>Vuex.Store</span>, options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>|<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber113">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/store/actions.js.html#lineNumber120">source</a></span></span>
     </span>
   </h3>
 
@@ -536,15 +564,55 @@
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">context</td>
-      <td data-ice="type" class="code"><span>*</span></td>
+      <td data-ice="type" class="code"><span>Vuex.Store</span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"></td>
     </tr>
 <tr data-ice="property" data-depth="0">
-      <td data-ice="name" class="code" data-depth="0">objectPattern1</td>
-      <td data-ice="type" class="code">{&quot;url&quot;: <span>*</span>, &quot;data&quot;: <span>*</span>, &quot;id&quot;: <span>*</span>, &quot;endpoint&quot;: <span>*</span>, &quot;params&quot;: <span>*</span>, &quot;offline&quot;: <span>*</span>}</td>
-      <td data-ice="appendix"><ul><li>default: {&quot;url&quot;:null,&quot;data&quot;:null,&quot;id&quot;:null,&quot;endpoint&quot;:null,&quot;params&quot;:null,&quot;offline&quot;:null}</li></ul></td>
+      <td data-ice="name" class="code" data-depth="0">options</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
       <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.url</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Url where send response</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.data</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.endpoint</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>Endpoint where saved model(if null, response not saved in store)</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.params</td>
+      <td data-ice="type" class="code"><span>axios.config</span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>see <span><a href="https://github.com/axios/axios#request-config">https://github.com/axios/axios#request-config</a></span></p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.id</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+<tr data-ice="property" data-depth="1">
+      <td data-ice="name" class="code" data-depth="1">options.offline</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>dont send response to server</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -556,7 +624,7 @@
     <table>
       <tbody>
         <tr>
-          <td class="return-type code" data-ice="returnType"><span>*</span></td>
+          <td class="return-type code" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>&lt;<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>|<span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a></span>&gt;</td>
           
         </tr>
       </tbody>
@@ -627,14 +695,14 @@
       <td data-ice="name" class="code" data-depth="1">options.url</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>Url where send response</p>
+      <td data-ice="description"><p>optional, url where send response(if null, used endpoint</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="1">
       <td data-ice="name" class="code" data-depth="1">options.endpoint</td>
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"><p>Where save data</p>
+      <td data-ice="description"><p>Where save data(if null, response not saved in store)</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="1">

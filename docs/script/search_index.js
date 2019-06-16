@@ -6,12 +6,6 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
-    "vue-fast-rest/src/utils/uuid.js~uuid",
-    "class/src/utils/Uuid.js~Uuid.html",
-    "<span>Uuid</span> <span class=\"search-result-import-path\">vue-fast-rest/src/utils/Uuid.js</span>",
-    "class"
-  ],
-  [
     "vue-fast-rest/src/store/actions.js~actions",
     "class/src/store/actions.js~actions.html",
     "<span>actions</span> <span class=\"search-result-import-path\">vue-fast-rest/src/store/actions.js</span>",
@@ -538,11 +532,5 @@ window.esdocSearchIndex = [
     "file/src/utils/Uuid.js.html",
     "src/utils/Uuid.js",
     "file"
-  ],
-  [
-    "src/utils/uuid.js~uuid.generate",
-    "class/src/utils/Uuid.js~Uuid.html#static-method-generate",
-    "src/utils/Uuid.js~Uuid.generate",
-    "method"
   ]
 ]
