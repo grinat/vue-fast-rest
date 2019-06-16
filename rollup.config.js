@@ -8,7 +8,8 @@ module.exports = {
   output: {
     file: 'dist/vue-fast-rest.js',
     format: 'umd',
-    name: 'VueFastRest'
+    name: 'VueFastRest',
+    sourcemap: true
   },
   plugins: [
     babel({

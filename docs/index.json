@@ -1,0 +1,2198 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/config.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/config.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "typedef",
+    "name": "PluginConfig",
+    "memberof": "src/config.js",
+    "static": true,
+    "longname": "src/config.js~PluginConfig",
+    "access": "public",
+    "description": "",
+    "lineNumber": 5,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "cache",
+        "description": "cache endpoints in miliseconds"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "PluginConfig"
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "src/http/DefaultRestClient.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/http/DefaultRestClient.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "class",
+    "name": "DefaultRestClient",
+    "memberof": "src/http/DefaultRestClient.js",
+    "static": true,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "access": "public",
+    "export": true,
+    "importPath": "vue-fast-rest/src/http/DefaultRestClient.js",
+    "importStyle": "DefaultRestClient",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "method",
+    "name": "beforeRequest",
+    "memberof": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient#beforeRequest",
+    "access": "public",
+    "description": "",
+    "lineNumber": 9,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<void>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "services"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "services",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<void>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "getReqConfig",
+    "memberof": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient#getReqConfig",
+    "access": "public",
+    "description": "",
+    "lineNumber": 17,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<axios.config|Object>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "services"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "services",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "url",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object",
+          "axios.config"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "see {@link https://github.com/axios/axios#request-config}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<axios.config|Object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "onError",
+    "memberof": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient#onError",
+    "access": "public",
+    "description": "",
+    "lineNumber": 33,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<never>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "services"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "services",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "axios.error"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<never>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "name": "create",
+    "memberof": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient#create",
+    "access": "public",
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "params": [
+      {
+        "name": "services",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "read",
+    "memberof": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient#read",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "params": [
+      {
+        "name": "services",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "update",
+    "memberof": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient#update",
+    "access": "public",
+    "description": null,
+    "lineNumber": 55,
+    "undocument": true,
+    "params": [
+      {
+        "name": "services",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/http/DefaultRestClient.js~DefaultRestClient",
+    "generator": false,
+    "async": true,
+    "static": false,
+    "longname": "src/http/DefaultRestClient.js~DefaultRestClient#delete",
+    "access": "public",
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "params": [
+      {
+        "name": "services",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "name": "plugin",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~plugin",
+    "access": "public",
+    "export": true,
+    "importPath": "vue-fast-rest/src/index.js",
+    "importStyle": "{plugin}",
+    "description": "",
+    "lineNumber": 16,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Vue"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "Vue",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Options"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Vuex.Store()"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.store",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "DefaultRestClient()"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.restClient",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.services",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.preserveState",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "PluginConfig"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.config",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "name": "src/store/actions.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/actions.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "class",
+    "name": "actions",
+    "memberof": "src/store/actions.js",
+    "static": true,
+    "longname": "src/store/actions.js~actions",
+    "access": "private",
+    "export": true,
+    "importPath": "vue-fast-rest/src/store/actions.js",
+    "importStyle": "actions",
+    "description": "",
+    "lineNumber": 9,
+    "interface": false
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "updateUrlEndpoint",
+    "memberof": "src/store/actions.js~actions",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/store/actions.js~actions.updateUrlEndpoint",
+    "access": "public",
+    "description": "",
+    "lineNumber": 22,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object|Error>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Vuex.Store"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "context",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.url",
+        "description": "Url where send response"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.endpoint",
+        "description": "Where save data"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.insertMany",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.cache",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "axios.config",
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.params",
+        "description": "see {@link https://github.com/axios/axios#request-config}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.offline",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object|Error>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "createModel",
+    "memberof": "src/store/actions.js~actions",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/store/actions.js~actions.createModel",
+    "access": "public",
+    "description": "",
+    "lineNumber": 76,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<Object|Error>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Vuex.Store"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "context",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.url",
+        "description": "Url where send response"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.data",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.endpoint",
+        "description": "Where append model"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.cache",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "axios.config",
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.params",
+        "description": "see {@link https://github.com/axios/axios#request-config}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "REST.updateActions"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.action",
+        "description": "What do with model"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.id",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options.offline",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Object|Error>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "updateModel",
+    "memberof": "src/store/actions.js~actions",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/store/actions.js~actions.updateModel",
+    "access": "public",
+    "description": null,
+    "lineNumber": 113,
+    "undocument": true,
+    "params": [
+      {
+        "name": "context",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"url\": *, \"data\": *, \"id\": *, \"endpoint\": *, \"params\": *, \"offline\": *}"
+        ],
+        "defaultRaw": {
+          "url": null,
+          "data": null,
+          "id": null,
+          "endpoint": null,
+          "params": null,
+          "offline": null
+        },
+        "defaultValue": "{\"url\":null,\"data\":null,\"id\":null,\"endpoint\":null,\"params\":null,\"offline\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "deleteModel",
+    "memberof": "src/store/actions.js~actions",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/store/actions.js~actions.deleteModel",
+    "access": "public",
+    "description": null,
+    "lineNumber": 148,
+    "undocument": true,
+    "params": [
+      {
+        "name": "context",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"url\": *, \"endpoint\": *, \"ids\": *, \"params\": *, \"offline\": *}"
+        ],
+        "defaultRaw": {
+          "url": null,
+          "endpoint": null,
+          "ids": null,
+          "params": null,
+          "offline": null
+        },
+        "defaultValue": "{\"url\":null,\"endpoint\":null,\"ids\":null,\"params\":null,\"offline\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "getServices",
+    "memberof": "src/store/actions.js~actions",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "src/store/actions.js~actions.getServices",
+    "access": "public",
+    "description": "",
+    "lineNumber": 180,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise<services>}"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<services>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "name": "src/store/getters.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/getters.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 69,
+    "kind": "class",
+    "name": "getters",
+    "memberof": "src/store/getters.js",
+    "static": true,
+    "longname": "src/store/getters.js~getters",
+    "access": "private",
+    "export": true,
+    "importPath": "vue-fast-rest/src/store/getters.js",
+    "importStyle": "getters",
+    "description": "",
+    "lineNumber": 6,
+    "interface": false
+  },
+  {
+    "__docId__": 70,
+    "kind": "member",
+    "name": "readUrlEndpoint",
+    "memberof": "src/store/getters.js~getters",
+    "static": true,
+    "longname": "src/store/getters.js~getters.readUrlEndpoint",
+    "access": "public",
+    "description": "",
+    "lineNumber": 11,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "state",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "function(endpoint: string): Object",
+        "null"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "member",
+    "name": "readEndpointState",
+    "memberof": "src/store/getters.js~getters",
+    "static": true,
+    "longname": "src/store/getters.js~getters.readEndpointState",
+    "access": "public",
+    "description": "",
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "state",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "function(endpoint: string): Object"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "src/store/index.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "name": "src/store/mutations.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/mutations.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "function",
+    "name": "findDefaultHandler",
+    "memberof": "src/store/mutations.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/store/mutations.js~findDefaultHandler",
+    "access": "public",
+    "export": false,
+    "importPath": "vue-fast-rest/src/store/mutations.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "class",
+    "name": "mutations",
+    "memberof": "src/store/mutations.js",
+    "static": true,
+    "longname": "src/store/mutations.js~mutations",
+    "access": "private",
+    "export": true,
+    "importPath": "vue-fast-rest/src/store/mutations.js",
+    "importStyle": "mutations",
+    "description": "",
+    "lineNumber": 16,
+    "interface": false
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "deleteModel",
+    "memberof": "src/store/mutations.js~mutations",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/store/mutations.js~mutations.deleteModel",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"endpoint\": *, \"ids\": *, \"findFunc\": *}"
+        ],
+        "defaultRaw": {
+          "endpoint": null,
+          "ids": null,
+          "findFunc": null
+        },
+        "defaultValue": "{\"endpoint\":null,\"ids\":null,\"findFunc\":null}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "updateCache",
+    "memberof": "src/store/mutations.js~mutations",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/store/mutations.js~mutations.updateCache",
+    "access": "public",
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"endpoint\": *, \"cache\": *}"
+        ],
+        "defaultRaw": {
+          "endpoint": null,
+          "cache": null
+        },
+        "defaultValue": "{\"endpoint\":null,\"cache\":null}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "updateEndpoint",
+    "memberof": "src/store/mutations.js~mutations",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/store/mutations.js~mutations.updateEndpoint",
+    "access": "public",
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"response\": *, \"insertMany\": *, \"endpoint\": *, \"action\": *, \"id\": *, \"findFunc\": *}"
+        ],
+        "defaultRaw": {
+          "response": null,
+          "insertMany": null,
+          "endpoint": null,
+          "action": null,
+          "id": null,
+          "findFunc": null
+        },
+        "defaultValue": "{\"response\":null,\"insertMany\":null,\"endpoint\":null,\"action\":null,\"id\":null,\"findFunc\":null}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "setEndpointState",
+    "memberof": "src/store/mutations.js~mutations",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/store/mutations.js~mutations.setEndpointState",
+    "access": "public",
+    "description": null,
+    "lineNumber": 104,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"type\": *, \"loading\": *, \"endpoint\": *}"
+        ],
+        "defaultRaw": {
+          "type": null,
+          "loading": null,
+          "endpoint": null
+        },
+        "defaultValue": "{\"type\":null,\"loading\":null,\"endpoint\":null}"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 80,
+    "kind": "file",
+    "name": "src/store/state.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/state.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 81,
+    "kind": "function",
+    "name": "state",
+    "memberof": "src/store/state.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/store/state.js~state",
+    "access": "private",
+    "export": true,
+    "importPath": "vue-fast-rest/src/store/state.js",
+    "importStyle": "state",
+    "description": "",
+    "lineNumber": 5,
+    "ignore": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 82,
+    "kind": "file",
+    "name": "src/types/crud-actions.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/types/crud-actions.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 83,
+    "kind": "variable",
+    "name": "CRUD_ACTIONS",
+    "memberof": "src/types/crud-actions.js",
+    "static": true,
+    "longname": "src/types/crud-actions.js~CRUD_ACTIONS",
+    "access": "private",
+    "export": true,
+    "importPath": "vue-fast-rest/src/types/crud-actions.js",
+    "importStyle": "{CRUD_ACTIONS}",
+    "description": "",
+    "lineNumber": 5,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"create\": string, \"read\": string, \"update\": string, \"delete\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "src/types/services.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/types/services.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "typedef",
+    "name": "services",
+    "memberof": "src/types/services.js",
+    "static": true,
+    "longname": "src/types/services.js~services",
+    "access": "public",
+    "description": "",
+    "lineNumber": 8,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "DefaultRestClient"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "restClient",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Vuex.Store"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "store",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "services",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "PluginConfig"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "config",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "services"
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "file",
+    "name": "src/types/types.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/types/types.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 87,
+    "kind": "typedef",
+    "name": "REST",
+    "memberof": "src/types/types.js",
+    "static": true,
+    "longname": "src/types/types.js~REST",
+    "access": "public",
+    "description": "",
+    "lineNumber": 8,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "REST.actions"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "actions",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "REST.getters"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "getters",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "REST.mutations"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "mutations",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "REST.updateActions"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "updateActions",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "REST"
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "typedef",
+    "name": "REST.actions",
+    "memberof": "src/types/types.js",
+    "static": true,
+    "longname": "src/types/types.js~REST.actions",
+    "access": "public",
+    "description": "Mapping for actions, you can use this.$store.dispatch(REST.actions.updateUrlEndpoint)\nor call manually this.$store.dispatch('rest/updateUrlEndpoint')",
+    "lineNumber": 18,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "updateUrlEndpoint",
+        "description": "rest/updateUrlEndpoint"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "createModel",
+        "description": "rest/createModel"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "updateModel",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "deleteModel",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "REST.actions"
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "typedef",
+    "name": "REST.getters",
+    "memberof": "src/types/types.js",
+    "static": true,
+    "longname": "src/types/types.js~REST.getters",
+    "access": "public",
+    "description": "",
+    "lineNumber": 28,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "readUrlEndpoint",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "REST.getters"
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "typedef",
+    "name": "REST.mutations",
+    "memberof": "src/types/types.js",
+    "static": true,
+    "longname": "src/types/types.js~REST.mutations",
+    "access": "public",
+    "description": "",
+    "lineNumber": 36,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "updateEndpoint",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "REST.mutations"
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "typedef",
+    "name": "REST.updateActions",
+    "memberof": "src/types/types.js",
+    "static": true,
+    "longname": "src/types/types.js~REST.updateActions",
+    "access": "public",
+    "description": "",
+    "lineNumber": 47,
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "append",
+        "description": "insert to start"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "prepend",
+        "description": "insert to end"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "replaceSame",
+        "description": "replace model"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "replace",
+        "description": "replace all endpoint"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "insertAfter",
+        "description": "insert after model"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "REST.updateActions"
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/utils/Uuid.js",
+    "content": "",
+    "static": true,
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/utils/Uuid.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "class",
+    "name": "Uuid",
+    "memberof": "src/utils/Uuid.js",
+    "static": true,
+    "longname": "src/utils/Uuid.js~Uuid",
+    "access": "private",
+    "export": true,
+    "importPath": "vue-fast-rest/src/utils/Uuid.js",
+    "importStyle": "{Uuid}",
+    "description": "",
+    "lineNumber": 4,
+    "interface": false
+  },
+  {
+    "__docId__": 94,
+    "kind": "method",
+    "name": "generate",
+    "memberof": "src/utils/Uuid.js~Uuid",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/Uuid.js~Uuid.generate",
+    "access": "public",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# vue-fast-rest\n\n\n[Docs](https://grinat.github.io/vue-fast-rest/docs/index.html)\n\n## Examples\n\n[List](https://grinat.github.io/vue-fast-rest/examples/list.html)\n\n## Install\nInstall from npm \n```\nnpm i vue-fast-rest --save\n```\n\nConnect to vue\n```js\n// import store from './store' // <-- get your Vuex instance\n\nimport {plugin} from 'vue-fast-rest'\nVue.use(plugin, { store }) // <-- connect plugin\n```\n\nOr if you use without npm from cdn and etc\n```js\n// create store\nVue.use(Vuex)\nconst store = new Vuex.Store()\n\n// connect plugin\nVue.use(VueFastRest.plugin, {store})\n```\n\n## Usage\n\n```vue\n<template>\n  <div>\n    <div class=\"items\">{{items}}</div>\n    <div class=\"statuses\">\n    creating: {{loading.create}}\n    reading: {{loading.read}}\n    updating: {{loading.update}}\n    deleting: {{loading.delete}}\n    </div>\n  </div>\n</template>\n<script>\nimport {REST} from 'vue-fast-rest'\n\nexport default {\n  computed: {\n    // read store data\n    items () {\n      return this.$store.getters[REST.getters.readUrlEndpoint](this.getEndpoint())\n    },\n    // get loading state for current endpoint\n    loading () {\n      return this.$store.getters[REST.getters.readEndpointState](this.getEndpoint())\n    }\n  },\n  mounted() {\n    // fetch data\n    this.$store.dispatch(REST.actions.updateUrlEndpoint, {\n       endpoint: this.getEndpoint()\n    })\n  },\n  methods: {\n    getEndpoint() {\n      return 'https://site.com/authors'\n    },\n    createItem () {\n      this.$store.dispatch(REST.actions.createModel, {\n         endpoint: this.getEndpoint(),\n         url: 'https://site.com/author/create',\n         data: {\n           title: 'Foo',\n           author: 'Bar'\n         }\n      })\n    },\n    removeItem (item) {\n      this.$store.dispatch(REST.actions.deleteModel, {\n         endpoint: this.getEndpoint(),\n         url: 'https://site.com/author/delete/' + item.id,\n         ids: [item.id]\n      })\n    },\n    updateItem (item) {\n      this.$store.dispatch(REST.actions.updateModel, {\n         endpoint: this.getEndpoint(),\n         url: 'https://site.com/author/update/' + item.id,\n         id: item.id,\n         data: {\n           title: 'Update'\n         }\n      })\n    }\n  }\n}\n</script>\n```\n\n",
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"vue-fast-rest\",\n  \"version\": \"0.0.1\",\n  \"description\": \"\",\n  \"main\": \"dist/vue-fast-rest\",\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup -c rollup.config.js\",\n    \"test:unit\": \"vue-cli-service test:unit\",\n    \"generate-docs\": \"rimraf docs/* && esdoc\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/grinat/vue-fast-rest.git\"\n  },\n  \"author\": \"Gabdrashitov Rinat <paladin2012gnu@gmail.com>\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/grinat/vue-fast-rest/issues\"\n  },\n  \"homepage\": \"https://github.com/grinat/vue-fast-rest#readme\",\n  \"dependencies\": {\n    \"axios\": \"^0.19.0\"\n  },\n  \"devDependencies\": {\n    \"@babel/plugin-proposal-class-properties\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.4.5\",\n    \"@types/chai\": \"^4.1.7\",\n    \"@types/expect\": \"^1.20.4\",\n    \"@vue/cli-plugin-babel\": \"^3.7.0\",\n    \"@vue/cli-plugin-eslint\": \"^3.7.0\",\n    \"@vue/cli-plugin-unit-mocha\": \"^3.7.0\",\n    \"@vue/cli-service\": \"^3.8.4\",\n    \"@vue/test-utils\": \"^1.0.0-beta.29\",\n    \"babel-eslint\": \"^10.0.1\",\n    \"chai\": \"^4.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-exclude-source-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.16.0\",\n    \"eslint-plugin-vue\": \"^5.0.0\",\n    \"mocha\": \"^6.1.4\",\n    \"rimraf\": \"^2.6.3\",\n    \"rollup\": \"^1.15.5\",\n    \"rollup-plugin-babel\": \"^4.3.2\",\n    \"rollup-plugin-commonjs\": \"^10.0.0\",\n    \"rollup-plugin-node-resolve\": \"^5.0.2\",\n    \"rollup-plugin-uglify\": \"^6.0.2\",\n    \"vue\": \"^2.6.10\",\n    \"vue-template-compiler\": \"^2.6.10\",\n    \"vuex\": \"^3.1.1\"\n  }\n}\n",
+    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

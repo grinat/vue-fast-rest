@@ -1,0 +1,64 @@
+{
+  "coverage": "53.57%",
+  "expectCount": 28,
+  "actualCount": 15,
+  "files": {
+    "src/http/DefaultRestClient.js": {
+      "expectCount": 8,
+      "actualCount": 3,
+      "undocumentLines": [
+        3,
+        37,
+        46,
+        55,
+        64
+      ]
+    },
+    "src/index.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/store/actions.js": {
+      "expectCount": 6,
+      "actualCount": 4,
+      "undocumentLines": [
+        113,
+        148
+      ]
+    },
+    "src/store/getters.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/store/mutations.js": {
+      "expectCount": 6,
+      "actualCount": 1,
+      "undocumentLines": [
+        4,
+        17,
+        36,
+        40,
+        104
+      ]
+    },
+    "src/store/state.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/types/crud-actions.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/utils/Uuid.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        5
+      ]
+    }
+  }
+}

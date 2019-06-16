@@ -1,8 +1,19 @@
-import DefaultRestClient from './api/DefaultRestClient'
-import REST from './store-module/types'
-import storeModule from './store-module/index'
+import DefaultRestClient from './http/DefaultRestClient'
+import REST from './types/types'
+import storeModule from './store/index'
+import {defaultConfig} from './config'
+import {services} from './types/services'
 
-function plugin (Vue, { store, restClient = new DefaultRestClient(), services = {}, preserveState = false, config = {} }) {
+/**
+ * @param {Vue} Vue
+ * @param {Options} options
+ * @param {Vuex.Store()} options.store
+ * @param {DefaultRestClient()} options.restClient
+ * @param {Object} options.services
+ * @param {Boolean} options.preserveState
+ * @param {PluginConfig} options.config
+ */
+function plugin (Vue, { store, restClient = new DefaultRestClient(), services: inpServices = {}, preserveState = false, config = {} }) {
   if (!store) {
     throw Error(`
 You need to pass store into plugin:    
@@ -13,19 +24,21 @@ You need to pass store into plugin:
     `)
   }
 
-  const defaultConfig = {
-    cache: 0 // cache endpoints in miliseconds
-  }
+  const servicesObj = Object.assign(services, {
+    restClient,
+    store: null,
+    services: inpServices,
+    config: Object.assign(defaultConfig, config)
+  })
 
   storeModule.actions = {
     ...storeModule.actions,
+    /**
+     * @return {Promise<{services}>}
+     */
     getServices: function () {
-      return Promise.resolve({
-        restClient,
-        store: this,
-        services,
-        config: Object.assign(defaultConfig, config)
-      })
+      servicesObj.store = this
+      return Promise.resolve(servicesObj)
     }
   }
   store.registerModule('rest', storeModule, { preserveState })

@@ -1,3 +1,6 @@
+/**
+ * @private
+ */
 export class Uuid {
   static generate () {
     let d = +new Date()

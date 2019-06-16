@@ -2,24 +2,34 @@ import axios from 'axios/dist/axios'
 
 export default class {
 
-  async beforeRequest () {}
+  /**
+   * @param {services} services
+   * @returns {Promise<void>}
+   */
+  async beforeRequest (services) {}
 
-  async getReqConfig (services, url, params) {
-    let options = {}
+  /**
+   * @param {services} services
+   * @param {string} url
+   * @param {Object|axios.config} params - see {@link https://github.com/axios/axios#request-config}
+   * @returns {Promise<axios.config|Object>}
+   */
+  async getReqConfig (services, url, params = {}) {
     if (services.store.getters.authToken) {
-      options.headers = {
-        'Authorization': 'Bearer  ' + services.store.getters.authToken
+      if (!params.headers) {
+        params.headers = {}
       }
+
+      params.headers['Authorization'] = 'Bearer ' + services.store.getters.authToken
     }
-    if (params) {
-      options = {
-        ...options,
-        ...params
-      }
-    }
-    return options
+    return params
   }
 
+  /**
+   * @param {services} services
+   * @param {axios.error} error
+   * @returns {Promise<never>}
+   */
   async onError (services, error) {
     return Promise.reject(error.response)
   }

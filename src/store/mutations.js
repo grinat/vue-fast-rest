@@ -1,5 +1,5 @@
-import REST from './types'
-import {CRUD_ACTIONS} from './types'
+import REST from '../types/types'
+import {CRUD_ACTIONS} from '../types/crud-actions'
 
 const findDefaultHandler = (v, id) => {
   if (v && v.hasOwnProperty('id')) {
@@ -10,8 +10,11 @@ const findDefaultHandler = (v, id) => {
   return false
 }
 
-export default {
-  deleteModel (state, { endpoint, ids = [], findFunc = findDefaultHandler}) {
+/**
+ * @private
+ */
+export default class mutations {
+  static deleteModel (state, { endpoint, ids = [], findFunc = findDefaultHandler}) {
     let endpointData = state.endpoints[endpoint] || null
 
     if (ids.length === 0) {
@@ -28,11 +31,13 @@ export default {
         }
       })
     }
-  },
-  updateCache (state, { endpoint, cache = 0 }) {
+  }
+
+  static updateCache (state, { endpoint, cache = 0 }) {
     state.cache[endpoint] = +Date.now() + cache
-  },
-  updateEndpoint (state, { response, insertMany = false, endpoint, action = REST.updateActions.replace, id, findFunc = findDefaultHandler }) {
+  }
+
+  static updateEndpoint (state, { response, insertMany = false, endpoint, action = REST.updateActions.replace, id, findFunc = findDefaultHandler }) {
     const newData = response.data || {}
     let endpointData = state.endpoints[endpoint] || null
 
@@ -94,8 +99,9 @@ export default {
 
     // connect reactive to all properties
     state.endpoints = Object.assign({}, state.endpoints)
-  },
-  setEndpointState (state, {type = CRUD_ACTIONS.read, loading = null, endpoint = null}) {
+  }
+
+  static setEndpointState (state, {type = CRUD_ACTIONS.read, loading = null, endpoint = null}) {
     if (endpoint === null) {
       return
     }
