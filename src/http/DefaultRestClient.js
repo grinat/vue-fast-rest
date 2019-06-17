@@ -69,7 +69,7 @@ export default class {
 
     const config = await this.getReqConfig(services, url, params)
 
-    return axios.patch(url, config)
+    return axios.patch(url, data, config)
       .then(response => this.onResponse(services, response))
       .catch(error => this.onError(services, error))
   }
