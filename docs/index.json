@@ -569,7 +569,7 @@
     "name": "src/config.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/config.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/config.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -610,7 +610,7 @@
     "name": "src/http/DefaultRestClient.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/http/DefaultRestClient.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/http/DefaultRestClient.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -681,11 +681,11 @@
     "longname": "src/http/DefaultRestClient.js~DefaultRestClient#getReqConfig",
     "access": "public",
     "description": "",
-    "lineNumber": 18,
+    "lineNumber": 21,
     "unknown": [
       {
         "tagName": "@returns",
-        "tagValue": "{Promise<axios.config|Object>}"
+        "tagValue": "{Promise<Object>}"
       }
     ],
     "params": [
@@ -712,19 +712,48 @@
       {
         "nullable": null,
         "types": [
-          "Object",
-          "axios.config"
+          "Object"
         ],
         "spread": false,
         "optional": false,
         "name": "params",
         "description": "see {@link https://github.com/axios/axios#request-config}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params.method",
+        "description": "get/post/put/patch/delete"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<function(data: string, headers: Object): Object|null>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params.transformRequest",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array<function(data: Object): Object|null>"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params.transformResponse",
+        "description": ""
       }
     ],
     "return": {
       "nullable": null,
       "types": [
-        "Promise<axios.config|Object>"
+        "Promise<Object>"
       ],
       "spread": false,
       "description": ""
@@ -741,7 +770,7 @@
     "longname": "src/http/DefaultRestClient.js~DefaultRestClient#onError",
     "access": "public",
     "description": "",
-    "lineNumber": 34,
+    "lineNumber": 42,
     "unknown": [
       {
         "tagName": "@returns",
@@ -762,12 +791,62 @@
       {
         "nullable": null,
         "types": [
-          "axios.error"
+          "Object"
         ],
         "spread": false,
         "optional": false,
         "name": "error",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error.config",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error.config.url",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error.config.method",
+        "description": "get/post/put/patch/delete"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error.response",
         "description": "see {@link https://github.com/axios/axios#response-schema}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error.request",
+        "description": "see {@link https://github.com/axios/axios#request-config}"
       }
     ],
     "return": {
@@ -790,7 +869,7 @@
     "longname": "src/http/DefaultRestClient.js~DefaultRestClient#onResponse",
     "access": "public",
     "description": "",
-    "lineNumber": 43,
+    "lineNumber": 53,
     "unknown": [
       {
         "tagName": "@returns",
@@ -811,12 +890,32 @@
       {
         "nullable": null,
         "types": [
-          "axios.response"
+          "Object"
         ],
         "spread": false,
         "optional": false,
         "name": "response",
         "description": "see {@link https://github.com/axios/axios#response-schema}"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.data",
+        "description": "Object returned from server"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.config",
+        "description": ""
       }
     ],
     "return": {
@@ -839,7 +938,7 @@
     "longname": "src/http/DefaultRestClient.js~DefaultRestClient#create",
     "access": "public",
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 57,
     "undocument": true,
     "params": [
       {
@@ -884,7 +983,7 @@
     "longname": "src/http/DefaultRestClient.js~DefaultRestClient#read",
     "access": "public",
     "description": null,
-    "lineNumber": 57,
+    "lineNumber": 67,
     "undocument": true,
     "params": [
       {
@@ -923,7 +1022,7 @@
     "longname": "src/http/DefaultRestClient.js~DefaultRestClient#update",
     "access": "public",
     "description": null,
-    "lineNumber": 67,
+    "lineNumber": 77,
     "undocument": true,
     "params": [
       {
@@ -968,7 +1067,7 @@
     "longname": "src/http/DefaultRestClient.js~DefaultRestClient#delete",
     "access": "public",
     "description": null,
-    "lineNumber": 77,
+    "lineNumber": 87,
     "undocument": true,
     "params": [
       {
@@ -1002,7 +1101,7 @@
     "name": "src/index.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/index.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -1102,7 +1201,7 @@
     "name": "src/store/actions.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/actions.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/store/actions.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -1598,7 +1697,7 @@
     "name": "src/store/getters.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/getters.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/store/getters.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -1697,7 +1796,7 @@
     "name": "src/store/index.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/index.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/store/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -1708,7 +1807,7 @@
     "name": "src/store/mutations.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/mutations.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/store/mutations.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -1958,7 +2057,7 @@
     "name": "src/store/state.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/store/state.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/store/state.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -1988,7 +2087,7 @@
     "name": "src/types/crud-actions.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/types/crud-actions.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/types/crud-actions.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -2019,7 +2118,7 @@
     "name": "src/types/services.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/types/services.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/types/services.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -2090,7 +2189,7 @@
     "name": "src/types/types.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/types/types.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/types/types.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -2351,7 +2450,7 @@
     "name": "src/utils/Uuid.js",
     "content": "",
     "static": true,
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/src/utils/Uuid.js",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/src/utils/Uuid.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -2403,15 +2502,15 @@
   {
     "kind": "index",
     "content": "# vue-fast-rest\n\n\n[Docs](https://grinat.github.io/vue-fast-rest/docs/index.html)\n\n## Examples\n\n[List](https://grinat.github.io/vue-fast-rest/examples/list.html)\n\n## Install\nInstall from npm \n```\nnpm i vue-fast-rest --save\n```\n\nConnect to vue\n```js\n// import store from './store' // <-- get your Vuex instance\n\nimport {plugin} from 'vue-fast-rest'\nVue.use(plugin, { store }) // <-- connect plugin\n```\n\nOr if you use without npm from cdn and etc\n```js\n// create store\nVue.use(Vuex)\nconst store = new Vuex.Store()\n\n// connect plugin\nVue.use(VueFastRest.plugin, {store})\n```\n\n## Usage\n\n```vue\n<template>\n  <div>\n    <div class=\"items\">{{items}}</div>\n    <div class=\"statuses\">\n    creating: {{loading.create}}\n    reading: {{loading.read}}\n    updating: {{loading.update}}\n    deleting: {{loading.delete}}\n    </div>\n  </div>\n</template>\n<script>\nimport {REST} from 'vue-fast-rest'\n\nexport default {\n  computed: {\n    // read store data\n    items () {\n      return this.$store.getters[REST.getters.readUrlEndpoint](this.getEndpoint())\n    },\n    // get loading state for current endpoint\n    loading () {\n      return this.$store.getters[REST.getters.readEndpointState](this.getEndpoint())\n    }\n  },\n  mounted() {\n    // fetch data\n    this.$store.dispatch(REST.actions.updateUrlEndpoint, {\n       endpoint: this.getEndpoint()\n    })\n  },\n  methods: {\n    getEndpoint() {\n      return 'https://site.com/authors'\n    },\n    createItem () {\n      this.$store.dispatch(REST.actions.createModel, {\n         endpoint: this.getEndpoint(),\n         url: 'https://site.com/author/create',\n         data: {\n           title: 'Foo',\n           author: 'Bar'\n         }\n      })\n    },\n    removeItem (item) {\n      this.$store.dispatch(REST.actions.deleteModel, {\n         endpoint: this.getEndpoint(),\n         url: 'https://site.com/author/delete/' + item.id,\n         ids: [item.id]\n      })\n    },\n    updateItem (item) {\n      this.$store.dispatch(REST.actions.updateModel, {\n         endpoint: this.getEndpoint(),\n         url: 'https://site.com/author/update/' + item.id,\n         id: item.id,\n         data: {\n           title: 'Update'\n         }\n      })\n    }\n  }\n}\n</script>\n```\n\n## Requirements\n\nRest API with arrays of data should always be returned in the format:\n```json\n{\n  \"data\": [\n     {\"id\": 1, \"price\": 1},\n     {\"id\": 2, \"title\": \"foo\"}\n  ],\n  // optional data, need for pagination\n  \"_meta\": {\n     \"totalCount\": 2, \n     \"currentPage\": 1,\n     \"pageCount\": 1,\n     \"perPage\": 20\n  }\n}\n```\nFor one item:\n```json\n{\"id\": 1, \"price\": 1}\n```\n\nIf you have other format, you can use adapters for convert data:\n```js\nthis.$store.dispatch(REST.actions.updateUrlEndpoint, {\n  endpoint: this.getEndpoint(),\n  params: {\n    transformResponse: [function (data) {\n      // Do whatever you want to transform the data\n      return data\n    }]\n  }\n})\n```\n\n",
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/README.md",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/README.md",
     "name": "./README.md",
     "static": true,
     "access": "public"
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"vue-fast-rest\",\n  \"version\": \"0.0.1\",\n  \"description\": \"\",\n  \"main\": \"dist/vue-fast-rest\",\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup -c rollup.config.js\",\n    \"test:unit\": \"vue-cli-service test:unit\",\n    \"generate-docs\": \"rimraf docs/* && esdoc\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/grinat/vue-fast-rest.git\"\n  },\n  \"author\": \"Gabdrashitov Rinat <paladin2012gnu@gmail.com>\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/grinat/vue-fast-rest/issues\"\n  },\n  \"homepage\": \"https://github.com/grinat/vue-fast-rest#readme\",\n  \"dependencies\": {\n    \"axios\": \"^0.19.0\"\n  },\n  \"devDependencies\": {\n    \"@babel/plugin-proposal-class-properties\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.4.5\",\n    \"@types/chai\": \"^4.1.7\",\n    \"@types/expect\": \"^1.20.4\",\n    \"@vue/cli-plugin-babel\": \"^3.7.0\",\n    \"@vue/cli-plugin-eslint\": \"^3.7.0\",\n    \"@vue/cli-plugin-unit-mocha\": \"^3.7.0\",\n    \"@vue/cli-service\": \"^3.8.4\",\n    \"@vue/test-utils\": \"^1.0.0-beta.29\",\n    \"babel-eslint\": \"^10.0.1\",\n    \"chai\": \"^4.2.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-exclude-source-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.16.0\",\n    \"eslint-plugin-vue\": \"^5.0.0\",\n    \"mocha\": \"^6.1.4\",\n    \"rimraf\": \"^2.6.3\",\n    \"rollup\": \"^1.15.5\",\n    \"rollup-plugin-babel\": \"^4.3.2\",\n    \"rollup-plugin-commonjs\": \"^10.0.0\",\n    \"rollup-plugin-node-resolve\": \"^5.0.2\",\n    \"rollup-plugin-uglify\": \"^6.0.2\",\n    \"vue\": \"^2.6.10\",\n    \"vue-template-compiler\": \"^2.6.10\",\n    \"vuex\": \"^3.1.1\"\n  }\n}\n",
-    "longname": "/home/grinat/WebstormProjects/vue-fast-rest/package.json",
+    "content": "{\n  \"name\": \"vue-fast-rest\",\n  \"version\": \"0.0.2\",\n  \"description\": \"\",\n  \"main\": \"dist/vue-fast-rest\",\n  \"files\": [\n    \"dist\"\n  ],\n  \"scripts\": {\n    \"build\": \"rollup -c rollup.config.js\",\n    \"test:unit\": \"vue-cli-service test:unit\",\n    \"test:unit:coverage\": \"nyc --reporter=text vue-cli-service test:unit\",\n    \"generate-docs\": \"rimraf docs/* && esdoc\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/grinat/vue-fast-rest.git\"\n  },\n  \"author\": \"Gabdrashitov Rinat <paladin2012gnu@gmail.com>\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/grinat/vue-fast-rest/issues\"\n  },\n  \"homepage\": \"https://github.com/grinat/vue-fast-rest#readme\",\n  \"dependencies\": {\n    \"axios\": \"^0.19.0\"\n  },\n  \"devDependencies\": {\n    \"@babel/plugin-proposal-class-properties\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.4.5\",\n    \"@types/chai\": \"^4.1.7\",\n    \"@types/expect\": \"^1.20.4\",\n    \"@vue/cli-plugin-babel\": \"^3.7.0\",\n    \"@vue/cli-plugin-eslint\": \"^3.7.0\",\n    \"@vue/cli-plugin-unit-mocha\": \"^3.7.0\",\n    \"@vue/cli-service\": \"^3.8.4\",\n    \"@vue/test-utils\": \"^1.0.0-beta.29\",\n    \"babel-eslint\": \"^10.0.1\",\n    \"body-parser\": \"^1.19.0\",\n    \"chai\": \"^4.2.0\",\n    \"cors\": \"^2.8.5\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-exclude-source-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.16.0\",\n    \"eslint-plugin-vue\": \"^5.0.0\",\n    \"express\": \"^4.17.1\",\n    \"mocha\": \"^6.1.4\",\n    \"nyc\": \"^14.1.1\",\n    \"rimraf\": \"^2.6.3\",\n    \"rollup\": \"^1.15.5\",\n    \"rollup-plugin-babel\": \"^4.3.2\",\n    \"rollup-plugin-commonjs\": \"^10.0.0\",\n    \"rollup-plugin-node-resolve\": \"^5.0.2\",\n    \"rollup-plugin-uglify\": \"^6.0.2\",\n    \"vue\": \"^2.6.10\",\n    \"vue-template-compiler\": \"^2.6.10\",\n    \"vuex\": \"^3.1.1\"\n  }\n}\n",
+    "longname": "/home/rinat/WebstormProjects/vue-fast-rest/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"

@@ -12,8 +12,11 @@ export default class {
   /**
    * @param {services} services
    * @param {string} url
-   * @param {Object|axios.config} params - see {@link https://github.com/axios/axios#request-config}
-   * @returns {Promise<axios.config|Object>}
+   * @param {Object} params - see {@link https://github.com/axios/axios#request-config}
+   * @param {Object} params.method - get/post/put/patch/delete
+   * @param {Array<function(data: string, headers: Object): Object|null>} params.transformRequest
+   * @param {Array<function(data: Object): Object|null>} params.transformResponse
+   * @returns {Promise<Object>}
    */
   async getReqConfig (services, url, params = {}) {
     if (services.store.getters.authToken) {
@@ -28,16 +31,23 @@ export default class {
 
   /**
    * @param {services} services
-   * @param {axios.error} error - see {@link https://github.com/axios/axios#response-schema}
+   * @param {Object} error
+   * @param {Object} error.config
+   * @param {String} error.config.url
+   * @param {String} error.config.method - get/post/put/patch/delete
+   * @param {Object} error.response - see {@link https://github.com/axios/axios#response-schema}
+   * @param {Object} error.request - see {@link https://github.com/axios/axios#request-config}
    * @returns {Promise<never>}
    */
   async onError (services, error) {
-    return Promise.reject(error.response)
+    return Promise.reject(error)
   }
 
   /**
    * @param {services} services
-   * @param {axios.response} response - see {@link https://github.com/axios/axios#response-schema}
+   * @param {Object} response - see {@link https://github.com/axios/axios#response-schema}
+   * @param {Object} response.data - Object returned from server
+   * @param {Object} response.config
    * @returns {Promise<*>}
    */
   async onResponse (services, response) {

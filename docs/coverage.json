@@ -8,10 +8,10 @@
       "actualCount": 4,
       "undocumentLines": [
         3,
-        47,
         57,
         67,
-        77
+        77,
+        87
       ]
     },
     "src/index.js": {
