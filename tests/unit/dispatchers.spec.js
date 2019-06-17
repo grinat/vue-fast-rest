@@ -6,73 +6,16 @@ import {URLS} from './fixtures'
 import {getInitedInstances} from './helper'
 import {REST} from '../../src/index'
 
-describe('vue-fast-rest', () => {
-  it('check commits', async () => {
-    const {store} = getInitedInstances()
-
-    // set one model
-    store.commit(REST.mutations.updateEndpoint, {
-      response: {
-        data: {
-          title: 'Foo'
-        }
-      },
-      endpoint: 'foo'
-    })
-    const item = store.getters[REST.getters.readUrlEndpoint]('foo')
-    expect(item).to.include({ title: 'Foo' })
-
-    // set many model
-    store.commit(REST.mutations.updateEndpoint, {
-      response: {
-        data: {
-          data: [
-            {title: 'Foo', id: 1},
-            {title: 'Bar', id: 2}
-          ]
-        }
-      },
-      endpoint: 'items'
-    })
-    const items = store.getters[REST.getters.readUrlEndpoint]('items')
-    expect(items).to.have.nested.property('data[0].title','Foo')
-    expect(items).to.have.nested.property('data[1].title','Bar')
-
-    // set model to top
-    store.commit(REST.mutations.updateEndpoint, {
-      action: REST.updateActions.prepend,
-      response: {
-        data: {title: 'Zoo', id: 777},
-      },
-      endpoint: 'items'
-    })
-    expect(items).to.have.nested.property('data[0].title','Zoo')
-
-    // set model after
-    store.commit(REST.mutations.updateEndpoint, {
-      action: REST.updateActions.insertAfter,
-      id: 777,
-      response: {
-        data: {title: 'Boo', id: 888},
-      },
-      endpoint: 'items'
-    })
-    expect(items).to.have.nested.property('data[1].title','Boo')
-
-    // replace model
-    store.commit(REST.mutations.updateEndpoint, {
-      action: REST.updateActions.replaceSame,
-      id: 888,
-      response: {
-        data: {title: 'Bazzz', id: 888},
-      },
-      endpoint: 'items'
-    })
-    expect(items).to.have.nested.property('data[1].title','Bazzz')
-
-  })
-
+describe('dispatchers', () => {
   it('check create/read/update/remove by dispatchers in vue component', async () => {
+    // run local express server for testing with real rest client
+    const port = process.env.PORT || 1234
+    const {server} = require('./server').initAndRunFixtureServer({
+      port
+    })
+
+    const ROOT_API = `http://localhost:${port}`
+
     const {localVue, store} = getInitedInstances()
 
     const wrapper = shallowMount({
@@ -80,42 +23,42 @@ describe('vue-fast-rest', () => {
       computed: {
         items () {
           return this.$store.getters[REST.getters.readUrlEndpoint](
-            URLS.books
+            ROOT_API + URLS.books
           )
         }
       },
       methods: {
         createItemInEndpoint (title) {
           return this.$store.dispatch(REST.actions.createModel, {
-            url: URLS.createBook,
-            endpoint: URLS.books,
+            url: ROOT_API + URLS.createBook,
+            endpoint: ROOT_API + URLS.books,
             data: { title }
           })
         },
         createItemWithoutEndpoint (title) {
           return this.$store.dispatch(REST.actions.createModel, {
-            url: URLS.createBook,
+            url: ROOT_API + URLS.createBook,
             data: { title }
           })
         },
         removeItemFromEndpoint (id) {
           return this.$store.dispatch(REST.actions.deleteModel, {
-            url: URLS.removeBook,
-            endpoint: URLS.books,
+            url: ROOT_API + URLS.removeBook,
+            endpoint: ROOT_API + URLS.books,
             ids: [id]
           })
         },
         updateItemInEndpoint (id, title) {
           return this.$store.dispatch(REST.actions.updateModel, {
-            url: URLS.updateBook,
-            endpoint: URLS.books,
+            url: ROOT_API + URLS.updateBook,
+            endpoint: ROOT_API + URLS.books,
             id,
-            data: { title }
+            data: { title, id }
           })
         },
         fetch () {
           return this.$store.dispatch(REST.actions.updateUrlEndpoint, {
-            endpoint: URLS.books
+            endpoint: ROOT_API + URLS.books
           })
         }
       }
@@ -159,5 +102,9 @@ describe('vue-fast-rest', () => {
     await wrapper.vm.updateItemInEndpoint(updId, updTitle)
     expect(wrapper.vm.items.data[0]).to.include({ title: updTitle })
     expect(wrapper.text()).to.include(updTitle)
-  })
+
+    // wait for local server close
+    await new Promise(resolve => server.close(resolve))
+
+  }).timeout(30000)
 })

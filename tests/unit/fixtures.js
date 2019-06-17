@@ -1,12 +1,12 @@
-export const URLS = {
-  book: 'http://site.com/book',
-  books: 'http://site.com/books',
-  createBook: 'http://site.com/book-create',
-  removeBook: 'http://site.com/book-remove',
-  updateBook: 'http://site.com/book-update'
+const URLS = {
+  book: '/book',
+  books: '/books',
+  createBook: '/book-create',
+  removeBook: '/book-remove',
+  updateBook: '/book-update'
 }
 
-export function createFixtures() {
+function createFixtures() {
   return {
     [URLS.books]: {
       // axios Response Schema
@@ -21,21 +21,29 @@ export function createFixtures() {
       status: 200,
       headers: {},
       config: {},
-      request: {}
+      request: {},
+      method: 'get'
     },
     [URLS.book]: {
       data: {
         id: 20, title: 'Just Me and My Dad'
-      }
+      },
+      method: 'get'
     },
     [URLS.createBook]: {
-      data: {}
+      data: {},
+      method: 'post'
     },
     [URLS.removeBook]: {
-      data: {}
+      data: {},
+      method: 'delete'
     },
     [URLS.updateBook]: {
-      data: {}
+      data: {},
+      method: 'patch'
     }
   }
 }
+
+module.exports.URLS = URLS
+module.exports.createFixtures = createFixtures
