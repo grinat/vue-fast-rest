@@ -1,7 +1,7 @@
 # vue-fast-rest
+[![Travis CI status](https://api.travis-ci.org/grinat/vue-fast-rest.svg?branch=master)](https://travis-ci.org/grinat/vue-fast-rest)
 
-
-[Docs](https://grinat.github.io/vue-fast-rest/docs/index.html)
+[Docs](https://vue-fast-rest.netlify.com/)
 
 ## Examples
 

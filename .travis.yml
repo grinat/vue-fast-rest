@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "10"
+
+jobs:
+  include:
+    - stage: Testing
+      script:
+        - npm i
+        - npm run test:unit || travis_terminate 1
+    - stage: Publish in npm
+      if: branch = master
+      script:
+        - npm i && npm run build
+        - npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish
