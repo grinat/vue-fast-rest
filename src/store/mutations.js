@@ -1,5 +1,6 @@
 import REST from '../types/types'
 import {CRUD_ACTIONS} from '../types/crud-actions'
+import {updateMeta} from '../utils/helpers'
 
 const findDefaultHandler = (v, id) => {
   if (v && v.hasOwnProperty('id')) {
@@ -10,38 +11,17 @@ const findDefaultHandler = (v, id) => {
   return false
 }
 
-const updateMeta = (endpointData, added = 0, removed = 0) => {
-  if (!endpointData._meta && endpointData.data) {
-    endpointData._meta = {
-      totalCount: endpointData.data.length,
-      pageCount: 1,
-      currentPage: 1,
-      perPage: endpointData.data.length * 2
-    }
-  }
-  if (endpointData._meta) {
-    if (added > 0) {
-      endpointData._meta.totalCount = +endpointData._meta.totalCount + added
-    }
-    if (removed > 0) {
-      endpointData._meta.totalCount = +endpointData._meta.totalCount - removed
-    }
-    endpointData._meta.pageCount = Math.ceil(endpointData._meta.totalCount / endpointData._meta.perPage)
-    if (endpointData._meta.currentPage > endpointData._meta.pageCount) {
-      endpointData._meta.currentPage = +endpointData._meta.pageCount
-    }
-    if (endpointData._meta.currentPage <= 0) {
-      endpointData._meta.currentPage = 1
-    }
-  }
-}
-
 /**
  * @private
  */
 export default class mutations {
-  static deleteModel (state, { endpoint, ids = [], findFunc = findDefaultHandler}) {
-    let endpointData = state.endpoints[endpoint] || null
+  static deleteModel (state, { endpoint, ids = [], findFunc = findDefaultHandler, notReactive = false}) {
+    let endpointData = null
+    if (notReactive === true) {
+      endpointData = state.notReactiveEndpoints[endpoint] || null
+    } else {
+      endpointData = state.endpoints[endpoint] || null
+    }
 
     if (ids.length === 0) {
       console.warn('Pass ids, example: ids: [45, 56], endpoint: ...')
@@ -64,9 +44,20 @@ export default class mutations {
     state.cache[endpoint] = +Date.now() + cache
   }
 
-  static updateEndpoint (state, { response, insertMany = false, endpoint, action = REST.updateActions.replace, id, findFunc = findDefaultHandler }) {
+  static updateEndpoint (state, { response, insertMany = false, endpoint, action = REST.updateActions.replace, id, findFunc = findDefaultHandler, notReactive = false}) {
     const newData = response.data || {}
-    let endpointData = state.endpoints[endpoint] || null
+    let endpointData = null
+
+    if (notReactive === true) {
+      if (state.notReactiveEndpoints[endpoint]) {
+        // copy values from freezed object to unfreezed
+        endpointData = {
+          ...state.notReactiveEndpoints[endpoint]
+        }
+      }
+    } else {
+      endpointData = state.endpoints[endpoint] || null
+    }
 
     if (endpointData === null) {
       if (action !== REST.updateActions.replace) {
@@ -128,10 +119,17 @@ export default class mutations {
         console.warn('Unknown action: ', action)
     }
 
-    state.endpoints[endpoint] = endpointData
-
-    // connect reactive to all properties
-    state.endpoints = Object.assign({}, state.endpoints)
+    if (notReactive === true) {
+      // freeze object, freezing not deep
+      // but vue ignore object and not set reactive get/set
+      state.notReactiveEndpoints[endpoint] = Object.freeze(endpointData)
+    } else {
+      // see https://vuex.vuejs.org/guide/mutations.html#mutations-follow-vue-s-reactivity-rules
+      state.endpoints = {
+        ...state.endpoints,
+        [endpoint]: endpointData
+      }
+    }
   }
 
   static setEndpointState (state, {type = CRUD_ACTIONS.read, loading = null, endpoint = null}) {
@@ -140,16 +138,17 @@ export default class mutations {
     }
 
     if (!state.endpointsState[endpoint]) {
-      state.endpointsState[endpoint] = {
-        [CRUD_ACTIONS.create]: null,
-        [CRUD_ACTIONS.read]: null,
-        [CRUD_ACTIONS.update]: null,
-        [CRUD_ACTIONS.delete]: null
+      state.endpointsState = {
+        ...state.endpointsState,
+        [endpoint]: {
+          [CRUD_ACTIONS.create]: null,
+          [CRUD_ACTIONS.read]: null,
+          [CRUD_ACTIONS.update]: null,
+          [CRUD_ACTIONS.delete]: null
+        }
       }
     }
-    state.endpointsState[endpoint][type] = loading
 
-    // connect reactive to all properties
-    state.endpointsState = Object.assign({}, state.endpointsState)
+    state.endpointsState[endpoint][type] = loading
   }
 }

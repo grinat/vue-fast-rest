@@ -1,12 +1,12 @@
 /* global it,describe */
 import { expect } from 'chai'
 
-import {Uuid} from '../../src/utils/Uuid'
+import {generateUUID} from '../../src/utils/helpers'
 
 describe('utils', () => {
   it('uuid', () => {
-    const val1 = Uuid.generate()
-    const val2 = Uuid.generate()
+    const val1 = generateUUID()
+    const val2 = generateUUID()
 
     expect(val1, 'is correct uuid').to.have.lengthOf(36)
 

@@ -5,5 +5,6 @@
 export default () => ({
   endpoints: {},
   cache: {},
-  endpointsState: {}
+  endpointsState: {},
+  notReactiveEndpoints: {}
 })

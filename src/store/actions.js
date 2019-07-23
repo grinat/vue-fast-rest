@@ -1,4 +1,4 @@
-import {Uuid} from '../utils/Uuid'
+import {createOfflineResponse} from '../utils/helpers'
 import REST from '../types/types'
 import {CRUD_ACTIONS} from '../types/crud-actions'
 import {services} from '../types/services'
@@ -14,15 +14,25 @@ export default class actions {
    * @param {String} options.url - optional, url where send response(if null, used endpoint
    * @param {String} options.endpoint - Where save data(if null, response not saved in store)
    * @param {Boolean} options.insertMany
+   * @param {Boolean} options.notReactive - save loaded data in not reactive store (usage for bigdata for map and etc.)
    * @param {Number} options.cache
+   * @param {Number} options.preferCache - get data from cache if exist
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {Boolean} options.offline
    * @returns {Promise<Object|Error>}
    */
-  static async updateUrlEndpoint (context, {url = null, endpoint = null, insertMany = false, cache = null, params, offline = false}) {
+  static async updateUrlEndpoint(context, {url = null, endpoint = null, insertMany = false, cache = null, params, offline = false, notReactive = false, preferCache = false}) {
     const services = await context.dispatch('getServices')
     if (cache === null) {
       cache = services.config.cache
+    }
+
+    if (preferCache === true) {
+      if (notReactive === true && context.state.notReactiveEndpoints[endpoint]) {
+        return {data: context.state.notReactiveEndpoints[endpoint]}
+      } else if (context.state.endpoints[endpoint]) {
+        return {data: context.state.endpoints[endpoint]}
+      }
     }
 
     if (offline === true) {
@@ -32,7 +42,7 @@ export default class actions {
       const offlineResponse = {data: {data: []}}
       if (endpoint) {
         context.commit('updateCache', {endpoint, cache})
-        context.commit('updateEndpoint', {endpoint, response: offlineResponse, insertMany})
+        context.commit('updateEndpoint', {endpoint, response: offlineResponse, insertMany, notReactive})
       }
       return offlineResponse
     }
@@ -49,7 +59,7 @@ export default class actions {
     ).then(response => {
       if (endpoint) {
         context.commit('updateCache', {endpoint, cache})
-        context.commit('updateEndpoint', {endpoint, response, insertMany})
+        context.commit('updateEndpoint', {endpoint, response, insertMany, notReactive})
       }
 
       endpoint && context.commit('setEndpointState', {loading: false, endpoint})
@@ -66,24 +76,22 @@ export default class actions {
    * @param {Vuex.Store} context
    * @param {Object} options
    * @param {String} options.url - Url where send response
-   * @param {Object} options.data
+   * @param {Object|FormData} options.data
    * @param {String} options.endpoint - Endpoint where saved model(if null, response not saved in store)
+   * @param {Boolean} options.notReactive - save data in not reactive store (usage for bigdata for map and etc.)
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {REST.updateActions} options.action - What do with model
    * @param {String|Number} options.id
    * @param {Boolean} options.offline
    * @returns {Promise<Object|Error>}
    */
-  static async createModel (context, {url = null, data: form, endpoint = null, params, action = REST.updateActions.append, id, offline = false}) {
+  static async createModel (context, {url = null, data, endpoint = null, params, action = REST.updateActions.append, id, offline = false, notReactive = false}) {
     const services = await context.dispatch('getServices')
 
-    const data = {...form}
-
     if (offline === true) {
-      data._storeUUID = Uuid.generate()
-      const offlineResponse = {data}
+      const offlineResponse = createOfflineResponse(data)
       if (endpoint) {
-        context.commit('updateEndpoint', {response: offlineResponse, endpoint, action, id})
+        context.commit('updateEndpoint', {response: offlineResponse, endpoint, action, id, notReactive})
       }
       return offlineResponse
     }
@@ -93,7 +101,7 @@ export default class actions {
       services, url, data, params
     ).then(response => {
       if (endpoint) {
-        context.commit('updateEndpoint', {response, endpoint, action, id})
+        context.commit('updateEndpoint', {response, endpoint, action, id, notReactive})
       }
 
       endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.read, loading: false, endpoint})
@@ -110,26 +118,22 @@ export default class actions {
    * @param {Vuex.Store} context
    * @param {Object} options
    * @param {String} options.url - Url where send response
-   * @param {Object} options.data
+   * @param {Object|FormData} options.data
    * @param {String} options.endpoint - Endpoint where saved model(if null, response not saved in store)
+   * @param {Boolean} options.notReactive
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {String|Number} options.id
    * @param {Boolean} options.offline - dont send response to server
    * @returns {Promise<Object|Error>}
    */
-  static async updateModel (context, {url = null, data: form, id, endpoint = null, params, offline = false}) {
+  static async updateModel (context, {url = null, data, id, endpoint = null, params, offline = false, notReactive = false}) {
     const services = await context.dispatch('getServices')
     const action = REST.updateActions.replaceSame
 
-    const data = {...form}
-
     if (offline === true) {
-      if (!data.hasOwnProperty('_storeUUID')) {
-        data._storeUUID = Uuid.generate()
-      }
-      const offlineResponse = {data}
+      const offlineResponse = createOfflineResponse(data)
       if (endpoint) {
-        context.commit('updateEndpoint', {response: offlineResponse, id, endpoint, action})
+        context.commit('updateEndpoint', {response: offlineResponse, id, endpoint, action, notReactive})
       }
       return offlineResponse
     }
@@ -139,7 +143,7 @@ export default class actions {
       services, url, data, params
     ).then(response => {
       if (endpoint) {
-        context.commit('updateEndpoint', {response, id, endpoint, action})
+        context.commit('updateEndpoint', {response, id, endpoint, action, notReactive})
       }
 
       endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.update, loading: false, endpoint})
@@ -157,17 +161,18 @@ export default class actions {
    * @param {Object} options
    * @param {String} options.url - Url where send response
    * @param {String} options.endpoint - Endpoint where delete model(if null, not removed from endpoint)
+   * @param {Boolean} options.notReactive
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {Array<number|string>} options.ids - Array of id to remove
    * @param {Boolean} options.offline - dont send response to server
    * @returns {Promise<Object|Error>}
    */
-  static async deleteModel (context, {url = null, endpoint = null, ids, params, offline = false}) {
+  static async deleteModel (context, {url = null, endpoint = null, ids, params, offline = false, notReactive = false}) {
     const services = await context.dispatch('getServices')
 
     if (offline === true) {
       if (endpoint) {
-        context.commit('deleteModel', {endpoint, ids})
+        context.commit('deleteModel', {endpoint, ids, notReactive})
       }
       return true
     }
@@ -177,7 +182,7 @@ export default class actions {
       services, url, params
     ).then(response => {
       if (endpoint) {
-        context.commit('deleteModel', {endpoint, ids})
+        context.commit('deleteModel', {endpoint, ids, notReactive})
       }
 
       endpoint && context.commit('setEndpointState', {type: CRUD_ACTIONS.delete, loading: false, endpoint})

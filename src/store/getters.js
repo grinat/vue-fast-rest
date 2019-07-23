@@ -8,7 +8,10 @@ export default class getters {
    * @param state
    * @return {function(endpoint: string): Object|null}
    */
-  static readUrlEndpoint = state => (endpoint) => {
+  static readUrlEndpoint = state => (endpoint, notReactive = false) => {
+    if (notReactive === true) {
+      return state.notReactiveEndpoints[endpoint] || null
+    }
     return state.endpoints[endpoint] || null
   }
 

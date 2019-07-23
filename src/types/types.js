@@ -19,7 +19,8 @@ export default {
     updateUrlEndpoint: 'rest/updateUrlEndpoint',
     createModel: 'rest/createModel',
     updateModel: 'rest/updateModel',
-    deleteModel: 'rest/deleteModel'
+    deleteModel: 'rest/deleteModel',
+    getServices: 'rest/getServices'
   },
   /**
    * @typedef {Object} REST.getters
