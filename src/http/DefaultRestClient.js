@@ -55,43 +55,67 @@ export default class {
   }
 
   async create (services, url, data, params) {
-    await this.beforeRequest(services)
+    try {
+      await this.beforeRequest(services)
 
-    const config = await this.getReqConfig(services, url, params)
+      const config = await this.getReqConfig(services, url, params)
 
-    return axios.post(url, data, config)
-      .then(response => this.onResponse(services, response))
-      .catch(error => this.onError(services, error))
+      let response = await axios.post(url, data, config)
+      response = await this.onResponse(services, response)
+
+      return response
+    } catch (e) {
+      return this.onError(services, e)
+    }
   }
 
   async read (services, url, params) {
-    await this.beforeRequest(services)
+    try {
+      await this.beforeRequest(services)
 
-    const config = await this.getReqConfig(services, url, params)
+      const config = await this.getReqConfig(services, url, params)
 
-    return axios.get(url, config)
-      .then(response => this.onResponse(services, response))
-      .catch(error => this.onError(services, error))
+      let response = await axios.get(url, config)
+      response = await this.onResponse(services, response)
+
+      return response
+    } catch (e) {
+      return this.onError(services, e)
+    }
   }
 
   async update (services, url, data, params) {
-    await this.beforeRequest(services)
+    try {
+      await this.beforeRequest(services)
 
-    const config = await this.getReqConfig(services, url, params)
+      const config = await this.getReqConfig(services, url, params)
 
-    return axios.patch(url, data, config)
-      .then(response => this.onResponse(services, response))
-      .catch(error => this.onError(services, error))
+      let response = await axios.patch(url, data, config)
+      response = await this.onResponse(services, response)
+
+      return response
+    } catch (e) {
+      return this.onError(services, e)
+    }
   }
 
   async delete (services, url, params) {
-    await this.beforeRequest(services)
+    try {
+      await this.beforeRequest(services)
 
-    const config = await this.getReqConfig(services, url, params)
+      const config = await this.getReqConfig(services, url, params)
 
-    return axios.delete(url, config)
-      .then(response => this.onResponse(services, response))
-      .catch(error => this.onError(services, error))
+      let response = await axios.delete(url, config)
+      response = await this.onResponse(services, response)
+
+      return response
+    } catch (e) {
+      return this.onError(services, e)
+    }
+  }
+
+  getHTTPLibInstance () {
+    return axios
   }
 
 }
