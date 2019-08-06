@@ -4,10 +4,13 @@ export default class {
 
   /**
    * @param {services} services
+   * @param {Object} reqParameters - request parameters (url, axios config, etc)
+   * @param {Object} reqParameters.url
+   * @param {Object} reqParameters.params
    * @returns {Promise<void>}
    */
   // eslint-disable-next-line
-  async beforeRequest (services) {}
+  async beforeRequest (services, reqParameters) {}
 
   /**
    * @param {services} services
@@ -37,9 +40,13 @@ export default class {
    * @param {String} error.config.method - get/post/put/patch/delete
    * @param {Object} error.response - see {@link https://github.com/axios/axios#response-schema}
    * @param {Object} error.request - see {@link https://github.com/axios/axios#request-config}
+   * @param {Object} reqParameters - request parameters (url, axios config, etc)
+   * @param {Object} reqParameters.url
+   * @param {Object} reqParameters.params
    * @returns {Promise<never>}
    */
-  async onError (services, error) {
+  // eslint-disable-next-line no-unused-vars
+  async onError (services, error, reqParameters) {
     return Promise.reject(error)
   }
 
@@ -56,7 +63,7 @@ export default class {
 
   async create (services, url, data, params) {
     try {
-      await this.beforeRequest(services)
+      await this.beforeRequest(services, {url, params})
 
       const config = await this.getReqConfig(services, url, params)
 
@@ -65,13 +72,13 @@ export default class {
 
       return response
     } catch (e) {
-      return this.onError(services, e)
+      return this.onError(services, e, {url, params})
     }
   }
 
   async read (services, url, params) {
     try {
-      await this.beforeRequest(services)
+      await this.beforeRequest(services, {url, params})
 
       const config = await this.getReqConfig(services, url, params)
 
@@ -80,13 +87,13 @@ export default class {
 
       return response
     } catch (e) {
-      return this.onError(services, e)
+      return this.onError(services, e, {url, params})
     }
   }
 
   async update (services, url, data, params) {
     try {
-      await this.beforeRequest(services)
+      await this.beforeRequest(services, {url, params})
 
       const config = await this.getReqConfig(services, url, params)
 
@@ -95,13 +102,13 @@ export default class {
 
       return response
     } catch (e) {
-      return this.onError(services, e)
+      return this.onError(services, e, {url, params})
     }
   }
 
   async delete (services, url, params) {
     try {
-      await this.beforeRequest(services)
+      await this.beforeRequest(services, {url, params})
 
       const config = await this.getReqConfig(services, url, params)
 
@@ -110,7 +117,7 @@ export default class {
 
       return response
     } catch (e) {
-      return this.onError(services, e)
+      return this.onError(services, e, {url, params})
     }
   }
 
