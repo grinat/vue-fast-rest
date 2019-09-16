@@ -1,11 +1,14 @@
 {
   "name": "vue-fast-rest",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "dist/vue-fast-rest",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "types"
   ],
+  "typings": "types/index.d.ts",
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "test:unit": "vue-cli-service test:unit",

@@ -6,7 +6,7 @@ import {CRUD_ACTIONS} from '../types/crud-actions'
 export default class getters {
   /**
    * @param state
-   * @return {function(endpoint: string): Object|null}
+   * @return {function(endpoint: string, notReactive?: boolean): Object|null}
    */
   static readUrlEndpoint = state => (endpoint, notReactive = false) => {
     if (notReactive === true) {

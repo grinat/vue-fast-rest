@@ -20,6 +20,15 @@ export default class actions {
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {Boolean} options.offline
    * @returns {Promise<Object|Error>}
+   * @example
+   * import {REST} from 'vue-fast-rest'
+   *
+   * const rawResponse = await this.$store.dispatch(REST.actions.updateUrlEndpoint, {
+   *    url: 'https://faap-app.herokuapp.com/faap/v1/books',
+   *    endpoint: 'my-books'
+   *  })
+   * const dataFromStore = await this.$store.getters[REST.getters.readUrlEndpoint]('my-books')
+   * console.log(rawResponse, dataFromStore)
    */
   static async updateUrlEndpoint(context, {url = null, endpoint = null, insertMany = false, cache = null, params, offline = false, notReactive = false, preferCache = false}) {
     const services = await context.dispatch('getServices')
@@ -84,6 +93,18 @@ export default class actions {
    * @param {String|Number} options.id
    * @param {Boolean} options.offline
    * @returns {Promise<Object|Error>}
+   * @example
+   * import {REST} from 'vue-fast-rest'
+   *
+   * const createResponse = await this.$store.dispatch(REST.actions.createModel, {
+   *    url: 'https://faap-app.herokuapp.com/faap/v1/books',
+   *    endpoint: 'my-books',
+   *    data: {
+   *      title: 'My little pony'
+   *    }
+   *  })
+   * const storeWithCreatedModel = await this.$store.getters[REST.getters.readUrlEndpoint]('my-books')
+   * console.log(createResponse, storeWithCreatedModel)
    */
   static async createModel (context, {url = null, data, endpoint = null, params, action = REST.updateActions.append, id, offline = false, notReactive = false}) {
     const services = await context.dispatch('getServices')
@@ -125,6 +146,19 @@ export default class actions {
    * @param {String|Number} options.id
    * @param {Boolean} options.offline - dont send response to server
    * @returns {Promise<Object|Error>}
+   * @example
+   * import {REST} from 'vue-fast-rest'
+   *
+   * const updResponse = await this.$store.dispatch(REST.actions.updateModel, {
+   *    url: 'https://faap-app.herokuapp.com/faap/v1/books/5d7f4bce80dd08001e9a309b',
+   *    endpoint: 'my-books',
+   *    data: {
+   *      title: 'My biggest pony'
+   *    },
+   *    id: '5d7f4bce80dd08001e9a309b'
+   *  })
+   * const storeWithUpdatedModel = await this.$store.getters[REST.getters.readUrlEndpoint]('my-books')
+   * console.log(updResponse, storeWithUpdatedModel)
    */
   static async updateModel (context, {url = null, data, id, endpoint = null, params, offline = false, notReactive = false}) {
     const services = await context.dispatch('getServices')
@@ -166,6 +200,16 @@ export default class actions {
    * @param {Array<number|string>} options.ids - Array of id to remove
    * @param {Boolean} options.offline - dont send response to server
    * @returns {Promise<Object|Error>}
+   * @example
+   * import {REST} from 'vue-fast-rest'
+   *
+   * const rmResponse = await this.$store.dispatch(REST.actions.deleteModel, {
+   *    url: 'https://faap-app.herokuapp.com/faap/v1/books/5d7f4bce80dd08001e9a309b',
+   *    endpoint: 'my-books',
+   *    ids: ['5d7f4bce80dd08001e9a309b']
+   *  })
+   * const storeWithoutRemoveModels = await this.$store.getters[REST.getters.readUrlEndpoint]('my-books')
+   * console.log(rmResponse, storeWithoutRemoveModels)
    */
   static async deleteModel (context, {url = null, endpoint = null, ids, params, offline = false, notReactive = false}) {
     const services = await context.dispatch('getServices')
