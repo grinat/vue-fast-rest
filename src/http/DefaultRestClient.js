@@ -67,7 +67,7 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await axios.post(url, data, config)
+      let response = await this.getHTTPLibInstance().post(url, data, config)
       response = await this.onResponse(services, response)
 
       return response
@@ -82,7 +82,7 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await axios.get(url, config)
+      let response = await this.getHTTPLibInstance().get(url, config)
       response = await this.onResponse(services, response)
 
       return response
@@ -97,7 +97,7 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await axios.patch(url, data, config)
+      let response = await this.getHTTPLibInstance().patch(url, data, config)
       response = await this.onResponse(services, response)
 
       return response
@@ -112,7 +112,7 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await axios.delete(url, config)
+      let response = await this.getHTTPLibInstance().delete(url, config)
       response = await this.onResponse(services, response)
 
       return response
@@ -121,6 +121,9 @@ export default class {
     }
   }
 
+  /**
+   * @returns {AxiosInstance}
+   */
   getHTTPLibInstance () {
     return axios
   }

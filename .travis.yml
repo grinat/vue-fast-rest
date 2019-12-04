@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "10"
+  - "12"
 
 jobs:
   include:
@@ -9,7 +9,7 @@ jobs:
         - npm i
         - npm run test:unit || travis_terminate 1
     - stage: Publish in npm
-      if: branch = master
+      if: tag =~ ^v
       script:
         - npm i && npm run build
         - npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && npm publish
