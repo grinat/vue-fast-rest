@@ -67,7 +67,12 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await this.getHTTPLibInstance().post(url, data, config)
+      let response = await this.getHTTPLibInstance()({
+        method: 'post',
+        url,
+        data,
+        ...config
+      })
       response = await this.onResponse(services, response)
 
       return response
@@ -82,7 +87,11 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await this.getHTTPLibInstance().get(url, config)
+      let response = await this.getHTTPLibInstance()({
+        method: 'get',
+        url,
+        ...config
+      })
       response = await this.onResponse(services, response)
 
       return response
@@ -97,7 +106,12 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await this.getHTTPLibInstance().patch(url, data, config)
+      let response = await this.getHTTPLibInstance()({
+        method: 'patch',
+        url,
+        data,
+        ...config
+      })
       response = await this.onResponse(services, response)
 
       return response
@@ -112,7 +126,11 @@ export default class {
 
       const config = await this.getReqConfig(services, url, params)
 
-      let response = await this.getHTTPLibInstance().delete(url, config)
+      let response = await this.getHTTPLibInstance()({
+        method: 'delete',
+        url,
+        ...config
+      })
       response = await this.onResponse(services, response)
 
       return response
