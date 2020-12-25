@@ -144,6 +144,7 @@ export default class actions {
    * @param {Boolean} options.notReactive
    * @param {axios.config|Object} options.params - see {@link https://github.com/axios/axios#request-config}
    * @param {String|Number} options.id
+   * @param {REST.updateActions} options.action - What do with model
    * @param {Boolean} options.offline - dont send response to server
    * @returns {Promise<Object|Error>}
    * @example
@@ -160,9 +161,8 @@ export default class actions {
    * const storeWithUpdatedModel = await this.$store.getters[REST.getters.readUrlEndpoint]('my-books')
    * console.log(updResponse, storeWithUpdatedModel)
    */
-  static async updateModel (context, {url = null, data, id, endpoint = null, params, offline = false, notReactive = false}) {
+  static async updateModel (context, {url = null, data, id, endpoint = null, params, offline = false, notReactive = false, action = REST.updateActions.replaceSame}) {
     const services = await context.dispatch('getServices')
-    const action = REST.updateActions.replaceSame
 
     if (offline === true) {
       const offlineResponse = createOfflineResponse(data)
